@@ -44,7 +44,7 @@ public class ConsoleIOLecture {
 //++++++++++        %s string
 //++++++++++       %d number..decimal integer (not for actual decimal numbers.. int
 //++++++++++      %f floating point number and double ... for decimals
-//++++++++++        %.2f will print out to two decimal places
+//++++++++++       %.2f will print out to two decimal places
 
         // multiple variables:
 //            int three = 3;
@@ -71,9 +71,10 @@ public class ConsoleIOLecture {
 
 
 //        String userInput = scanner.next
-        String userInput = sc.next();
+//            String userInput = sc.next();
 //        System.out.println(userInput);
-//        System.out.println("You entered the following:" + userInput); //type hello World returns: You entered the following: Hello
+//        System.out.println("You entered the following:" + userInput); //
+//        type hello World returns: You entered the following: Hello
 
 //        String userInputs = sc.nextLine(); //multiple words
 //        System.out.println("you entered"  + userInput); // Yo
