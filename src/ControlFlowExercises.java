@@ -96,14 +96,22 @@ public class ControlFlowExercises {
         String userAnswer = sc.next();
         boolean confirmation = userAnswer.equalsIgnoreCase("y");
         if(confirmation) {
-            if ((userInput >= 88) && (userInput <= 100)) {
-                System.out.print("Your letter grade is: A");
-            } else if (userInput >= 80) {
-                System.out.print("Your letter grade is: B");
-            } else if (userInput >= 67) {
-                System.out.print("Your letter grade is: C");
-            } else if (userInput >= 60) {
-                System.out.print("Your letter grade is: D");
+            if ((userInput <= 100) && (userInput >= 94)) {
+                System.out.print("Your letter grade is: A+");
+            }else if((userInput <= 93) && (userInput >= 88)){
+                System.out.println("Your letter grade is: A-");
+            }else if((userInput <=87 ) && (userInput >= 85)){
+                System.out.println("Your letter grade is: B+");
+            }else if((userInput <=84 ) && (userInput >= 80)){
+                System.out.println("Your letter grade is: B-");
+            }else if((userInput <=79 ) && (userInput >= 73)){
+                System.out.println("Your letter grade is: C+");
+            }else if((userInput <=72 ) && (userInput >= 67)){
+                System.out.println("Your letter grade is: C-");
+            }else if((userInput <=66 ) && (userInput >= 63)){
+                System.out.println("Your letter grade is: D+");
+            }else if((userInput <=62 ) && (userInput >= 60)){
+                System.out.println("Your letter grade is: B+");
             } else if (userInput >= 0) {
                 System.out.print("Your letter grade is: F");
             }
