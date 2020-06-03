@@ -1,9 +1,9 @@
-//import java.util.Scanner;
+import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
-//        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
 //===1(a)
 
@@ -66,6 +66,26 @@ public class ControlFlowExercises {
 
 //Table of Powers
 
+        System.out.println("Enter an integer:");
+        int userInput = sc.nextInt();
+
+        System.out.print("Continue? [y/N] ");
+        String userAnswer = sc.next();
+        boolean confirmation = userAnswer.equalsIgnoreCase("y");
+
+            if (confirmation) {
+                System.out.println("Here is your table!\n");
+                System.out.print("number | squared | cubed \n");
+                System.out.println("------ | ------  | ------");
+
+                for (int i = 1; i <= userInput; i++) {
+                    System.out.printf("%-7d|", i);
+                    System.out.printf("%-9d|", i*i);
+                    System.out.printf("%-7d\n", i*i*i);
+                }
+        }else {
+                System.out.println("Terminated");
+            }
 
     }
 }
