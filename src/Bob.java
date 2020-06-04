@@ -20,30 +20,30 @@ public class Bob {
         do {
             userInput = sc.nextLine();
             if (userInput.endsWith("?")) {
-                System.out.println(sure);
-                System.out.print("^_^\n" +
-                                   "-|-\n" +
-                                   "/ \\\n");
+                System.out.print(sure);
+                System.out.print("  ^_^\n" +
+                                 "      -|-\n" +
+                                 "      / \\\n");
             } else if (userInput.endsWith("!")) {
-                System.out.println(chillOut);
-                System.out.print("0_0\n" +
-                                   "~|~\n" +
-                                   "/ \\\n");
+                System.out.print(chillOut);
+                System.out.print("  0_0\n" +
+                                 "                  ~|~\n" +
+                                 "                  / \\\n");
             } else if (userInput.equals("")) {
-                System.out.println(fine);
-                System.out.print("0_o\n" +
-                                   "<|>\n" +
-                                   "/ \\\n");
+                System.out.print(fine);
+                System.out.print("  0_o\n" +
+                                 "                    <|>\n" +
+                                 "                    / \\\n");
             }else if(userInput.equals("bye")){
-                System.out.println(bye);
-                System.out.print("0_0\n" +
-                                   "<|-'\n" +
-                                   "/ \\\n");
+                System.out.print(bye);
+                System.out.print(" 0_0\n" +
+                                 "     <|-'\n" +
+                                 "     / \\\n");
             } else {
-                System.out.println(whatever);
-                System.out.print("-_-\n" +
-                                   "<|>\n" +
-                                   "/ \\\n");
+                System.out.print(whatever);
+                System.out.print("  -_-\n" +
+                                 "              <|>\n" +
+                                 "              / \\\n");
             }
         } while(!userInput.equals("bye"));
 
