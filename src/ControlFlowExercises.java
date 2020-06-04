@@ -54,7 +54,7 @@ public class ControlFlowExercises {
 // FIZZBUZZ
 
 //        for (int i = 1; i <= 100; i++) {
-//            if (((i % 5) == 0) && ((i % 3) == 0)) {
+//            if (i % 15 == 0) {
 //                System.out.println("FizzBuzz");
 //            } else if ((i % 3) == 0) {
 //                System.out.println("Fizz");
@@ -66,59 +66,67 @@ public class ControlFlowExercises {
 
 //Table of Powers
 
-        System.out.println("Enter an integer:");
-        int userInput = sc.nextInt();
-
-        System.out.print("Continue? [y/N] ");
-        String userAnswer = sc.next();
-        boolean confirmation = userAnswer.equalsIgnoreCase("y");
-
-            if (confirmation) {
-                System.out.println("Here is your table!\n");
-                System.out.print("number | squared | cubed \n");
-                System.out.println("------ | ------  | ------");
-
-                for (int i = 1; i <= userInput; i++) {
-                    System.out.printf("%-7d|", i);
-                    System.out.printf("%-9d|", i*i);
-                    System.out.printf("%-7d\n", i*i*i);
-                }
-        }else {
-                System.out.println("Terminated");
-            }
-
-
-//Grades
-
-//        System.out.println("Enter your numerical grade.");
+//        System.out.println("Enter a whole number:");
 //        int userInput = sc.nextInt();
+//
 //        System.out.print("Continue? [y/N] ");
 //        String userAnswer = sc.next();
 //        boolean confirmation = userAnswer.equalsIgnoreCase("y");
-//        if(confirmation) {
-//            if ((userInput <= 100) && (userInput >= 94)) {
-//                System.out.print("Your letter grade is: A+");
-//            }else if((userInput <= 93) && (userInput >= 88)){
-//                System.out.println("Your letter grade is: A-");
-//            }else if((userInput <=87 ) && (userInput >= 85)){
-//                System.out.println("Your letter grade is: B+");
-//            }else if((userInput <=84 ) && (userInput >= 80)){
-//                System.out.println("Your letter grade is: B-");
-//            }else if((userInput <=79 ) && (userInput >= 73)){
-//                System.out.println("Your letter grade is: C+");
-//            }else if((userInput <=72 ) && (userInput >= 67)){
-//                System.out.println("Your letter grade is: C-");
-//            }else if((userInput <=66 ) && (userInput >= 63)){
-//                System.out.println("Your letter grade is: D+");
-//            }else if((userInput <=62 ) && (userInput >= 60)){
-//                System.out.println("Your letter grade is: B+");
-//            } else if (userInput >= 0) {
-//                System.out.print("Your letter grade is: F");
+//
+//            if (confirmation) {
+//                System.out.println("Here is your table!\n");
+//                System.out.print("number | squared | cubed \n");
+//                System.out.println("------ | ------  | ------");
+//
+//                for (int i = 1; i <= userInput; i++) {
+//                    System.out.printf("%-7d|%-9d|%-7d\n", i, i*i, i*i*i);
+////                    System.out.printf("%-9d|", i*i);
+////                    System.out.printf("%-7d\n", i*i*i);
+//                }
+//        }else {
+//                System.out.println("Terminated");
 //            }
-//        }else{
-//            System.out.println("Stay in school!");
-//        }
 
+
+//Grades
+        System.out.println("Check all of your grades here.");
+        System.out.println("To exit type 'done'.");
+        System.out.print("Would you like to continue? [y/N] ");
+        String userAnswer = sc.next();
+        boolean confirmation = userAnswer.equalsIgnoreCase("y");
+        if (confirmation) {
+            System.out.println("Enter your numerical grade.");
+
+            int userInput;
+            String userExit;
+
+            do {
+                userExit = sc.nextLine();
+                userInput = sc.nextInt();
+
+                if ((userInput <= 100) && (userInput >= 94)) {
+                    System.out.println("Your letter grade is: A+");
+                } else if ((userInput <= 93) && (userInput >= 88)) {
+                    System.out.println("Your letter grade is: A-");
+                } else if ((userInput <= 87) && (userInput >= 85)) {
+                    System.out.println("Your letter grade is: B+");
+                } else if ((userInput <= 84) && (userInput >= 80)) {
+                    System.out.println("Your letter grade is: B-");
+                } else if ((userInput <= 79) && (userInput >= 73)) {
+                    System.out.println("Your letter grade is: C+");
+                } else if ((userInput <= 72) && (userInput >= 67)) {
+                    System.out.println("Your letter grade is: C-");
+                } else if ((userInput <= 66) && (userInput >= 63)) {
+                    System.out.println("Your letter grade is: D+");
+                } else if ((userInput <= 62) && (userInput >= 60)) {
+                    System.out.println("Your letter grade is: D-");
+                } else if ((userInput <= 61) && (userInput >= 0)) {
+                    System.out.println("Your letter grade is: F");
+                }else{
+                    System.out.println("not a grade, try again");
+                }
+            } while (!userExit.equalsIgnoreCase("done"));
+        }
 
 
     }
