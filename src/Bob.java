@@ -9,7 +9,9 @@ public class Bob {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("This is Bob:  0_0\nTalk to Bob...");
+        System.out.println("...If you'd ever like to end your talk with Bob type: 'bye')");
         String userInput = sc.nextLine();
+
 
         if (userInput.endsWith("?")) {
             System.out.println(sure);
@@ -17,14 +19,14 @@ public class Bob {
             System.out.println(chillOut);
         } else if (userInput.equalsIgnoreCase("")) {
             System.out.print(fine);
+        }else if(userInput.equalsIgnoreCase("bye")){
+            System.out.println("Bye!");
+            System.exit(1);
         }else{
             System.out.println("Whatever");
         }
 
-//        Bob answers 'Sure.' if you ask him a question. (the input ends with a question mark)
-//        He answers 'Whoa, chill out!' if you yell at him. (the input ends with an exclamation mark)
-//        He says 'Fine. Be that way!' if you address him without actually saying anything. (empty input)
-//        He answers 'Whatever.' to anything else.
+
 
     }
 }
