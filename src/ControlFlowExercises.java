@@ -80,8 +80,6 @@ public class ControlFlowExercises {
 //
 //                for (int i = 1; i <= userInput; i++) {
 //                    System.out.printf("%-7d|%-9d|%-7d\n", i, i*i, i*i*i);
-////                    System.out.printf("%-9d|", i*i);
-////                    System.out.printf("%-7d\n", i*i*i);
 //                }
 //        }else {
 //                System.out.println("Terminated");
@@ -123,7 +121,7 @@ public class ControlFlowExercises {
                 } else if ((userInput <= 61) && (userInput >= 0)) {
                     System.out.println("Your letter grade is: F");
                 }else{
-                    System.out.println("not a grade, try again");
+                    System.out.println("Not a grade, try again");
                 }
             } while (!userExit.equalsIgnoreCase("done"));
         }
