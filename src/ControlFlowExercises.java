@@ -99,8 +99,8 @@ public class ControlFlowExercises {
             String userExit;
 
             do {
-                userExit = sc.nextLine();
                 userInput = sc.nextInt();
+//                userExit = sc.nextLine();
 
                 if ((userInput <= 100) && (userInput >= 94)) {
                     System.out.println("Your letter grade is: A+");
@@ -123,7 +123,9 @@ public class ControlFlowExercises {
                 }else{
                     System.out.println("Not a grade, try again");
                 }
-            } while (!userExit.equalsIgnoreCase("done"));
+                System.out.print("Would you like to continue? [y/N] ");
+                userExit = sc.next();
+            } while (userExit.equalsIgnoreCase("y"));
         }
 
 
