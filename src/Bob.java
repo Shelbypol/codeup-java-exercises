@@ -8,22 +8,24 @@ public class Bob {
         String fine = "Fine. Be that way!";
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("This is Bob:  0_0\nTalk to Bob...");
-        System.out.println("...If you'd ever like to end your talk with Bob type: 'bye')");
-        String userInput = sc.nextLine();
-
+        System.out.println("This is Bob:  0_0\n" +
+                           "              -|-\n" +
+                           "              / \\\n" +
+                           "Talk to Bob:");
+        System.out.println("(...If you'd ever like to end your talk with Bob type: 'bye')");
+        String userInput = sc.next();
 
         if (userInput.endsWith("?")) {
-            System.out.println(sure);
+            System.out.print(sure);
         } else if (userInput.endsWith("!")) {
-            System.out.println(chillOut);
+            System.out.print(chillOut);
         } else if (userInput.equalsIgnoreCase("")) {
             System.out.print(fine);
         }else if(userInput.equalsIgnoreCase("bye")){
-            System.out.println("Bye!");
+            System.out.print("Bye!");
             System.exit(1);
         }else{
-            System.out.println("Whatever");
+            System.out.print("Whatever...");
         }
 
 
