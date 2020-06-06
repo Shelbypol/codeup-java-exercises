@@ -1,12 +1,25 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class ConsoleExercises {
 
-    public static void main(String[] args) {
-//        double pi = 3.14159;
-//        System.out.printf("The value of pi is approximately %.2f", pi);
+    public static long getPower(int base, int exponent) {
+        if (exponent == 0) {
+            return 1;
+        } else if (exponent == 1) {
+            return base;
+        } else if (exponent == 2) {
+            return base * base;
+        }
+        return base * exponent;
+    }
 
-        Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        System.out.println(ConsoleExercises.getPower(29, 0));
+////        double pi = 3.14159;
+////        System.out.printf("The value of pi is approximately %.2f", pi);
+//
+//        Scanner sc = new Scanner(System.in);
 //        Scanner sc = new Scanner("\n");
 
 
