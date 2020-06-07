@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MethodsExercises {
 
     //addition
@@ -11,35 +13,53 @@ public class MethodsExercises {
     }
 
     //multiplication
-    public static int multiplication(int a, int b){
+    public static int multiplication(int a, int b) {
         return (a * b);
     }
 
     //division
-    public static int division(int a, int b){
+    public static int division(int a, int b) {
         return (a / b);
     }
 
     //modulus
-    public static int modulus(int a, int b){
+    public static int modulus(int a, int b) {
         return (a % b);
     }
 
     //bonus
-    private static int multiply(int x, int y) {
-        if (x == 0 || y == 0) {
-            return 0;
-        } else if (y > 0) {
-            System.out.println("x " + x);
-            System.out.println("y " + y);
+//    public static int multiply(int x, int y) {
+//        if (x == 0 || y == 0) {
+//            return 0;
+//        } else if (y > 0) {
+//            System.out.println("x " + x);
+//            System.out.println("y " + y);
+//
+//            int count = x + multiply(x, y - 1);
+//
+//            System.out.println("count " + count);
+//
+//            return count;
+//        }
+//        return multiply(x, y);
+//    }
 
-            int count = x + multiply(x, y - 1);
+    //(2) Validate user input;
+    public static int getInteger() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number between 1 and 10: ");
+        int min =  Integer.parseInt(sc.next());
+        int max =  Integer.parseInt(sc.next());
 
-            System.out.println("count " + count);
-
-            return count;
+        if (( ((min > 0) && (min < 10)) && ((max > 0) && (max <= 10))  )){
+        System.out.println("Congrats, your input is within range!");
+        }else {
+            System.out.print("Try Again: Enter a number between 1 and 10: ");
+//            min =  Integer.parseInt(sc.next());
+//            max =  Integer.parseInt(sc.next());
+//        return getInteger();
         }
-        return multiply(x, y);
+        return getInteger();
     }
 
 
@@ -50,6 +70,10 @@ public class MethodsExercises {
 //        System.out.println(division(6, 2));
 //        System.out.println(modulus(20, 2));
 //        System.out.println("times for loop " + times(2, 3));
-        System.out.println("answer "+ multiply(4,10));
+//        System.out.println("answer "+ multiply(4,10));
+        getInteger();
+
+
+
     }
 }
