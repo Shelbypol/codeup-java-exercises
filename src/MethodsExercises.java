@@ -45,43 +45,41 @@ public class MethodsExercises {
 //    }
 
     //(2) Validate user input;
-    public static int getInteger(int min, int max) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number between 1 and 50: ");
-        int userInput = sc.nextInt();
-
-        if (userInput > max || userInput < min) {
-            System.out.println("Try Again:");
-            return getInteger(min, max);
-        }
-        System.out.println("Congrats, your input is within range!");
-        return userInput;
-
-    }
+//    public static int getInteger(int min, int max) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter a number between 1 and 50: ");
+//        int userInput = sc.nextInt();
+//
+//        if (userInput > max || userInput < min) {
+//            System.out.println("Try Again:");
+//            return getInteger(min, max);
+//        }
+//        System.out.println("Congrats, your input is within range!");
+//        return userInput;
+//
+//    }
 
     // (3) Factorial
 
-//    public static void factorial() {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Enter a number and we will calculate the factorial of it!");
-//        String userAnswer;
-//
-//        do {
-//            int userInput = Integer.parseInt(sc.next());
-//            if ((userInput > 0) && (userInput <= 10)) {
-//                if(userInput > 1) {
-//                    long count = userInput * (userInput - 1);
-//                }
-//
-//            } else {
-//                factorial();
-//
-//            }
-//
-//            System.out.print("Would you like to continue? [y/N] ");
-//            userAnswer = sc.next();
-//        } while (userAnswer.equalsIgnoreCase("y"));
-//    }
+    public static void factorial() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number and we will calculate the factorial of it!");
+
+        int userInput = sc.nextInt();
+        //continue
+        System.out.print("Would you like to continue? [y/N] ");
+        String userAnswer = sc.next();
+        boolean confirm = userAnswer.equalsIgnoreCase("y");
+        //if yes
+        if(confirm) {
+            int result = 1;
+            for (int i = userInput; i > 0; i--) {
+                result = result * i;
+                System.out.println(result);
+            }
+            factorial();
+        }
+    }
 
 
     public static void main(String[] args) {
@@ -92,8 +90,8 @@ public class MethodsExercises {
 //        System.out.println(modulus(20, 2));
 //        System.out.println("times for loop " + times(2, 3));
 //        System.out.println("answer "+ multiply(4,10));
-        getInteger(1, 50);
-//        factorial();
+//        getInteger(1, 50);
+        factorial();
 
 
     }
