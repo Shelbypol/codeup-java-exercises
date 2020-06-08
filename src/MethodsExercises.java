@@ -83,27 +83,23 @@ public class MethodsExercises {
 
 
     //(4) Dice game
-    public static void dice() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("How many sides do you want your die to have? (up to but no more than 20)");
-        int dieSides = sc.nextInt();
-        System.out.print("Would you like to roll? [y/N] ");
-        String userAnswer = sc.next();
-        boolean confirm = userAnswer.equalsIgnoreCase("y");
-        if(confirm) {
-            int a = (int) (Math.random() * dieSides);
-            int b = (int) (Math.random() * dieSides);
+//    public static void dice() {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("How many sides do you want your die to have?");
+//        int dieSides = sc.nextInt();
+//        System.out.print("Would you like to roll? [y/N] ");
+//        String userAnswer = sc.next();
+//        boolean confirm = userAnswer.equalsIgnoreCase("y");
+//        if(confirm) {
+//            int a = (int) (Math.random() * dieSides);
+//            int b = (int) (Math.random() * dieSides);
+//
+//            System.out.println("die 1 rolled: " + a + "\ndie 2 rolled: " + b);
+//            dice();
+//        }
+//    }
 
-//            if(a == 1 || b == 1){
-//                System.out.println(" ----- \n" +
-//                                   " | . | \n" +
-//                                   " _____");
-//            }
 
-            System.out.println("die 1 rolled: " + a + "\ndie 2 rolled: " + b);
-            dice();
-        }
-    }
 
     public static void main(String[] args) {
 //        System.out.println(addition(1, 2));
@@ -115,7 +111,7 @@ public class MethodsExercises {
 //        System.out.println("answer "+ multiply(4,10));
 //        getInteger(1, 50);
 //        factorial();
-        dice();
+//        dice();
 
     }
 }
