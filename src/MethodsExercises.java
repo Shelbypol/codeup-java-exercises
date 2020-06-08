@@ -61,25 +61,25 @@ public class MethodsExercises {
 
     // (3) Factorial
 
-    public static void factorial() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number and we will calculate the factorial of it!");
-
-        int userInput = sc.nextInt();
-        //continue
-        System.out.print("Would you like to continue? [y/N] ");
-        String userAnswer = sc.next();
-        boolean confirm = userAnswer.equalsIgnoreCase("y");
-        //if yes
-        if(confirm) {
-            int result = 1;
-            for (int i = userInput; i > 0; i--) {
-                result = result * i;
-            }
-                System.out.println(result);
-            factorial();
-        }
-    }
+//    public static void factorial() {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter a number and we will calculate the factorial of it!");
+//
+//        int userInput = sc.nextInt();
+//        //continue
+//        System.out.print("Would you like to continue? [y/N] ");
+//        String userAnswer = sc.next();
+//        boolean confirm = userAnswer.equalsIgnoreCase("y");
+//        //if yes
+//        if(confirm) {
+//            int result = 1;
+//            for (int i = userInput; i > 0; i--) {
+//                result = result * i;
+//            }
+//                System.out.println(result);
+//            factorial();
+//        }
+//    }
 
 
     //(4) Dice game
@@ -110,7 +110,7 @@ public class MethodsExercises {
 //        System.out.println("times for loop " + times(2, 3));
 //        System.out.println("answer "+ multiply(4,10));
 //        getInteger(1, 50);
-        factorial();
+//        factorial();
 //        dice();
 
     }
