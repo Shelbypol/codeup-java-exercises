@@ -61,26 +61,49 @@ public class MethodsExercises {
 
     // (3) Factorial
 
-    public static void factorial() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number and we will calculate the factorial of it!");
+//    public static void factorial() {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter a number and we will calculate the factorial of it!");
+//
+//        int userInput = sc.nextInt();
+//        //continue
+//        System.out.print("Would you like to continue? [y/N] ");
+//        String userAnswer = sc.next();
+//        boolean confirm = userAnswer.equalsIgnoreCase("y");
+//        //if yes
+//        if(confirm) {
+//            int result = 1;
+//            for (int i = userInput; i > 0; i--) {
+//                result = result * i;
+//                System.out.println(result);
+//            }
+//            factorial();
+//        }
+//    }
 
-        int userInput = sc.nextInt();
-        //continue
-        System.out.print("Would you like to continue? [y/N] ");
+
+    //(4) Dice game
+    public static void dice() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("How many sides do you want your die to have? (up to but no more than 20)");
+        int dieSides = sc.nextInt();
+        System.out.print("Would you like to roll? [y/N] ");
         String userAnswer = sc.next();
         boolean confirm = userAnswer.equalsIgnoreCase("y");
-        //if yes
         if(confirm) {
-            int result = 1;
-            for (int i = userInput; i > 0; i--) {
-                result = result * i;
-                System.out.println(result);
-            }
-            factorial();
+            int a = (int) (Math.random() * dieSides);
+            int b = (int) (Math.random() * dieSides);
+
+//            if(a == 1 || b == 1){
+//                System.out.println(" ----- \n" +
+//                                   " | . | \n" +
+//                                   " _____");
+//            }
+
+            System.out.println("die 1 rolled: " + a + "\ndie 2 rolled: " + b);
+            dice();
         }
     }
-
 
     public static void main(String[] args) {
 //        System.out.println(addition(1, 2));
@@ -91,8 +114,8 @@ public class MethodsExercises {
 //        System.out.println("times for loop " + times(2, 3));
 //        System.out.println("answer "+ multiply(4,10));
 //        getInteger(1, 50);
-        factorial();
-
+//        factorial();
+        dice();
 
     }
 }
