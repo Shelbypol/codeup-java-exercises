@@ -45,21 +45,21 @@ public class MethodsExercises {
 //    }
 
     //(2) Validate user input;
-    public static int getInteger() {
+    public static void getInteger() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number between 1 and 10: ");
-        int min =  Integer.parseInt(sc.next());
-        int max =  Integer.parseInt(sc.next());
+        System.out.println("Enter a number between 1 and 10: ");
+        int min =  Integer.parseInt(sc.nextLine());
+        int max =  Integer.parseInt(sc.nextLine());
 
         if (( ((min > 0) && (min < 10)) && ((max > 0) && (max <= 10))  )){
         System.out.println("Congrats, your input is within range!");
+
         }else {
-            System.out.print("Try Again: Enter a number between 1 and 10: ");
-//            min =  Integer.parseInt(sc.next());
-//            max =  Integer.parseInt(sc.next());
-//        return getInteger();
+            System.out.println("Try Again:");
+            getInteger();
+
         }
-        return getInteger();
+
     }
 
 
