@@ -34,33 +34,39 @@
 //      - how to control class constructors
 //      - using the "this" keyword
 //      - controlling encapsultation with visibility modifiers
+
+
 package oopLecture;
 
 import java.util.Scanner;
 
-public class OopLec {
+public class OopLecture {
 
     public static void main(String[] args) {
 
         // ======================== slide 3 (classes and objects)
-            Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-            Person rick = new Person();
-            rick.firstName = "Rick";
-            rick.lastName = "Sanchez";
-//            rick.age = 23;
-            System.out.println(rick.firstName);
-            System.out.println(rick.lastName);
+//        Person rick = new Person();
+//        rick.firstName = "Rick";
+//        rick.lastName = "Sanchez";
+//        rick.age += 1;
+//        System.out.println(rick.firstName); //default null
+//        System.out.println(rick.lastName); //default null
+//        System.out.println(rick.age);   //default 0
+////        System.out.println(rick.character); //default square char
+////        System.out.println(rick.isEmployed); //default is false
 //
-            Person fred = new Person();
-            fred.firstName = "Fred";
-            fred.lastName = "Smith";
-            System.out.println(fred.firstName);
-            System.out.println(fred.lastName);
+//        Person fred = new Person();
+//        fred.firstName = "Fred";
+//        fred.lastName = "Smith";
+//        System.out.println(fred.firstName);
+//        System.out.println(fred.lastName);
 
+
+// Instance and Object words interchangable
 
         // -- Dog Example --
-
 
 //            Dog d1 = new Dog();
 //
@@ -79,13 +85,14 @@ public class OopLec {
 
         // -- Dog Method Example --
 
-//            Dog d1 = new Dog();
-//            d1.age = 3;
-//            d1.breed = "corgi";
-//            d1.canBreed = false;
-//            d1.name = "Tater";
-//
-//            d1.callForDog("Tater");
+        Dog d1 = new Dog();
+        d1.age = 3;
+        d1.breed = "corgi";
+        d1.canBreed = false;
+        d1.name = "Tater";
+        System.out.println(d1.animalType);
+
+        d1.callForDog("Tater");
 
 
         // ======================== slide 5 (class fields)
@@ -149,6 +156,5 @@ public class OopLec {
 //        public String lastName;
 
 
-
-    }
+}
 //}

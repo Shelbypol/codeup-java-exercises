@@ -1,21 +1,24 @@
 package oopLecture;
 
 public class Person {
-    //        // SLIDE 3
-        public String firstName;
-        public String lastName;
+    // SLIDE 3
+//        public String firstName;
+//        public String lastName;
+//        public int age = 23;
+////        public char character;
+////        public boolean isEmployed;
 
 
     // SLIDE 4
 
-//        // instance variables
-//        public String firstName;
-//        public String lastName;
-//
-//        // instance method
-//        public String sayHello() {
-//                return lastName + ", " + firstName + " says hi!";
-//        }
+        // instance variables
+        public String firstName;
+        public String lastName;
+
+        // instance method
+        public String sayHello() {
+                return lastName + ", " + firstName + " says hi!";
+        }
 
 
     // SLIDE 7

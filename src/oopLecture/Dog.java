@@ -5,7 +5,7 @@ public class Dog {
 
     public String name;
     public String breed;
-    public final String animalType = "Canine";
+    public final String animalType = "Canine"; //constant //static
     public boolean canBreed;
     public int age;
 
