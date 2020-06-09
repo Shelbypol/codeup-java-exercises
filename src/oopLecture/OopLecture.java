@@ -39,13 +39,34 @@
 package oopLecture;
 
 import java.util.Scanner;
+import java.util.Date;
 
 public class OopLecture {
-
     public static void main(String[] args) {
 
         // ======================== slide 3 (classes and objects)
         Scanner sc = new Scanner(System.in);
+
+        //control enter..quick constructor
+
+
+        Person person = new Person();
+        person.name = "John Smith";
+        person.age = 32;
+
+        Post post = new Post();
+        post.category = "funny";
+        post.title = "A Day";
+        post.content = "The content of the course is hard. Super hard. Really hard.";
+        post.createdAt = new Date();
+        post.editedAt = new Date();
+        post.author = person;
+
+        System.out.println(post.author.age);
+
+
+
+
 
 //        Person rick = new Person();
 //        rick.firstName = "Rick";
@@ -85,26 +106,25 @@ public class OopLecture {
 
         // -- Dog Method Example --
 
-        Dog d1 = new Dog();
-        d1.age = 3;
-        d1.breed = "corgi";
-        d1.canBreed = false;
-        d1.name = "Tater";
-        System.out.println(d1.animalType);
-
-        d1.callForDog("Tater");
+//        Dog d1 = new Dog();
+//        d1.age = 3;
+//        d1.breed = "corgi";
+//        d1.canBreed = false;
+//        d1.name = "Tater";
+//        System.out.println(d1.animalType);
+//
+//        d1.callForDog("Tater");
 
 
         // ======================== slide 5 (class fields)
-
-
+//
 //            System.out.println(Arithmetic.PI);
 //            System.out.println(Arithmetic.add(5, 5));
 //            System.out.println(Arithmetic.multiply(5, 5));
 
         // -- DogHelper Example --
-
-
+//        System.out.println(DogHelper.NUMBER_OF_DOG_BREEDS);
+//        System.out.println(DogHelper.humanToDogYears(5));
         // ======================== slide 7 (class vs. object fields)
 
 //            Person theBestDrummerAlive = new Person();

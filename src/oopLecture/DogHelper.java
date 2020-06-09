@@ -1,6 +1,8 @@
 package oopLecture;
 
 public class DogHelper {
+    //instance of a class if the static is removed
+
     public static final int NUMBER_OF_DOG_BREEDS = 340;
 
     public static final int APPROX_POPULATION_OF_DOGS = 52000000;
