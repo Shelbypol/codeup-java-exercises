@@ -8,11 +8,11 @@ public class Input {
     private String scanner;
 
     public String getString() {
-        return this.scanner;
+        return this.scanner = sc.next();
     }
 
     public boolean yesNo() {
-        return this.scanner.startsWith("y");
+        return getString().startsWith("y");
     }
 
     public int getInt(int min, int max) {
@@ -24,6 +24,10 @@ public class Input {
         return userInput;
     }
 
+    public int getInt() {
+        return sc.nextInt();
+    }
+
     public double getDouble(double min, double max) {
         double userInput = sc.nextDouble();
         if (userInput > max || userInput < min) {
@@ -31,6 +35,10 @@ public class Input {
             return getDouble(min, max);
         }
         return userInput;
+    }
+
+    public double getDouble() {
+        return sc.nextDouble();
     }
 
 
