@@ -36,46 +36,37 @@ package oopLecture;
 
 public class Dish {
 
-    public double costInCents;
-    public String nameOfDish;
-    public boolean wouldRecommend;
-
-    public Dish(double cost, String name, boolean recommend){
-        costInCents = cost;
-        nameOfDish = name;
-        wouldRecommend = recommend;
-    }
-
-
-
+    private double costInCents;
+    private String nameOfDish;
+    private boolean wouldRecommend;
 
     public void printSummary(){
         System.out.printf("Cost: %.2f\nName of: %s\nRecommended: %b", costInCents, nameOfDish, wouldRecommend);
     }
 
     //cost in cents
-//    public double getCostInCents() {
-//        return costInCents;
-//    }
-//    public void setCostInCents(double costInCents) {
-//        this.costInCents = costInCents;
-//    }
-//
-//    //name of dish
-//    public String getNameOfDish(){
-//        return nameOfDish;
-//    }
-//    public void setNameOfDish(String nameOfDish){
-//        this.nameOfDish = nameOfDish;
-//    }
-//
-//    //would recommend
-//    public boolean getWouldRecommend(){
-//        return wouldRecommend;
-//    }
-//    public void setWouldRecommend(Boolean wouldRecommend){
-//        this.wouldRecommend = wouldRecommend;
-//    }
+    public double getCostInCents() {
+        return costInCents;
+    }
+    public void setCostInCents(double costInCents) {
+        this.costInCents = costInCents;
+    }
+
+    //name of dish
+    public String getNameOfDish(){
+        return nameOfDish;
+    }
+    public void setNameOfDish(String nameOfDish){
+        this.nameOfDish = nameOfDish;
+    }
+
+    //would recommend
+    public boolean getWouldRecommend(){
+        return wouldRecommend;
+    }
+    public void setWouldRecommend(Boolean wouldRecommend){
+        this.wouldRecommend = wouldRecommend;
+    }
 
 
 }
