@@ -16,7 +16,7 @@ public class Person {
     //method
     public void sayHello() {
 //TODO: print a message to the console using the person's name
-        System.out.printf("Hello, %s!", getName());
+        System.out.printf("Hello, %s!\n", getName());
     }
 
     //constructor
