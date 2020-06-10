@@ -21,14 +21,16 @@ public class Person {
 
     //constructor
     public Person() {
-        Person.name = this.name;
+        sayHello();
     }
 
     public static void main(String[] args) {
 
         Person p1 = new Person();
-        p1.name = "shelby";
-        System.out.println(setName("shelby"));
+        p1.name = "Shelby";
+        setName("p1.name");
+
+
 
 
     }
