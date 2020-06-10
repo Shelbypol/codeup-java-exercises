@@ -11,6 +11,7 @@ public class Person {
     public void setName(String name) {
 //TODO: change the name property to the passed value
         this.name = name;
+        sayHello();
     }
 
     //method
@@ -20,15 +21,13 @@ public class Person {
     }
 
     //constructor
-    public Person() {
-        sayHello();
+    public Person(String name) {
+        setName(name);
     }
 
     public static void main(String[] args) {
 
-        Person p1 = new Person();
-        p1.name = "Shelby";
-        setName("p1.name");
+        Person p1 = new Person("Shelby");
 
 
 
