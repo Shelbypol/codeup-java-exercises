@@ -4,7 +4,8 @@ import util.Input;
 
 import java.util.Scanner;
 
-public class Circle {
+public class Circle extends Input {
+
 Scanner sc = new Scanner(System.in);
 
     private double radius;

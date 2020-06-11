@@ -26,6 +26,7 @@ public class InputTest {
         double getDoubleRange = input1.getDouble(0, 1);
         System.out.printf("You entered: %.2f\n", getDoubleRange);
 
+        System.out.println("Thank you for your participation!");
 
     }
 }

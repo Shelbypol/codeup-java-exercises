@@ -12,6 +12,9 @@ public class Input{
     public String getString() {
         return this.scanner = sc.next();
     }
+    public void setString(String s) {
+        this.scanner = s;
+    }
 
     public boolean yesNo() {
         return getString().startsWith("y");
