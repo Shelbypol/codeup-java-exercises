@@ -6,6 +6,10 @@ public class InputTest {
 
         Input input1 = new Input();
 
+        System.out.println("Enter something...");
+        String favWord = input1.getString();
+        System.out.printf("You entered: %s\n",favWord);
+
         System.out.println("Would you like to continue?");
         boolean yesNo = input1.yesNo();
         System.out.printf("You choose: %b\n", yesNo);
@@ -18,7 +22,7 @@ public class InputTest {
         int getIntRange = input1.getInt(20, 35);
         System.out.printf("You entered: %d\n", getIntRange);
 
-        System.out.println("Please enter a number with decimal places.");
+        System.out.println("Please enter decimal number.");
         double getDouble = input1.getDouble();
         System.out.printf("You entered: %.2f\n", getDouble);
 
