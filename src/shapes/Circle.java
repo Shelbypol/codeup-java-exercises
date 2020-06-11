@@ -1,5 +1,7 @@
 package shapes;
 
+import util.Input;
+
 import java.util.Scanner;
 
 public class Circle {
@@ -30,12 +32,4 @@ Scanner sc = new Scanner(System.in);
         return (2 * Math.PI * this.radius);
     }
 
-
-//    circumference = 2 x pi x radius
-//    area = pi x (radius ^ 2)
-//12.57
-//    25.13
-
-    // c-5 31.42
-    // a-5 78.54
 }

@@ -1,8 +1,10 @@
 package util;
 
+import shapes.Circle;
+
 import java.util.Scanner;
 
-public class Input {
+public class Input{
     Scanner sc = new Scanner(System.in);
 
     private String scanner;
