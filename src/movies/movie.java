@@ -6,11 +6,11 @@ public class movie {
     private String category;
 
     public double getName() {
-        return this.radius = sc.nextDouble();
+        return this.name;
     }
 
-    public void setName(double r) {
-        this.radius = r;
+    public void setName(String n) {
+        this.name = n;
     }
 
 }
