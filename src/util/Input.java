@@ -32,7 +32,7 @@ public class Input {
 
     public int getInt(int min, int max) {
         int userInput = getInt();
-        if (userInput > max || userInput < min) {
+        if (userInput < max || userInput > min) {
             System.out.println("Try Again:");
             return getInt(min, max);
         }
