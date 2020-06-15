@@ -11,7 +11,7 @@ public class ShapesTest {
 
         System.out.println("=========");
 
-        Rectangle box2 = new Square(5);
+        Square box2 = new Square(5);
 
         System.out.printf("This shape has a length of: %d and a width of %d.\n", box2.getLength(), box2.getWidth());
         System.out.println("Area: " + box2.getArea() + "\n" + "Perimeter: " + box2.getPerimeter());
