@@ -2,6 +2,12 @@ package inheritanceLecture;
 
 public class AnimalTest {
 
+    public static void makeAnimalsNoise(Animal[] animals) {
+        for (Animal a : animals) {
+            a.makeNoise();
+        }
+    }
+
     public static void main(String[] args) {
 //        Animal a = new Animal();
 //        a.setAge(3);
@@ -21,26 +27,34 @@ public class AnimalTest {
 //        System.out.println("=========");
 //        System.out.println(c.toString());
 
-        Dog d = new Dog();
-        d.setAge(3);
-        d.setSpecies("Canine");
-        d.setBreed("Border Terrier");
-
-        d.makeNoise();
-        d.makeGenericAnimalNoise();
+        Dog d = new Dog("canine", 3, "border terrier");
         System.out.println(d.toString());
-        //===========================
-        Cat c = new Cat();
-        c.setAge(11);
-        c.setSpecies("Feline");
-        c.makeNoise();
-        //===========================
-        Animal a = new Animal();
-        a.setSpecies("Primate");
-        a.setAge(100);
+//        d.makeNoise();
+        System.out.println("=========");
 
-        a.makeNoise();
+        //===========================
 
+        Cat c = new Cat("feline", 5, 8);
+        System.out.println(c.toString());
+//        c.makeNoise();
+        System.out.println("=========");
+
+        //===========================
+
+        Animal a = new Animal("Primate", 100);
+
+        System.out.println(a.toString());
+
+        Animal[] animals = new Animal[2];
+        animals[0] = d;
+        animals[1] = c;
+
+
+//        animals[0].fetchBall();
+        Dog dog = (Dog) animals[0];
+        dog.fetchBall();
+
+        makeAnimalsNoise(animals);
 
 
     }

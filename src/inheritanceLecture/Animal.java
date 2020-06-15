@@ -2,19 +2,20 @@ package inheritanceLecture;
 
 public class Animal {
 
-    protected String species;
-    protected int age;
+    private String species;
+    private int age;
 
     //Empty Constructor for inheritance
-    public Animal() {
-
-    }
+//    public Animal() {
+//
+//    }
 
     //constructor Animal Class
     public Animal(String species, int age) {
         this.species = species;
         this.age = age;
     }
+
 
     //methods for being inherited in dog and cat class
     public void makeNoise() {

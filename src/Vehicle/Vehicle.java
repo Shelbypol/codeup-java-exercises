@@ -1,4 +1,4 @@
-package inheritanceLecture.Vehicle;
+package Vehicle;
 
 public class Vehicle {
 
@@ -7,8 +7,12 @@ public class Vehicle {
     private String powerSource;
 
     //Constructor
-    public Vehicle() {
+//    public Vehicle() {
+//
+//    }
 
+    public void turnOn(){
+        System.out.println("Vehicle is turning on...");
     }
 
     public Vehicle(boolean operable, int capacity, String power) {
