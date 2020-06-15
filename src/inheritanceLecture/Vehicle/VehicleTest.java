@@ -4,8 +4,11 @@ public class VehicleTest {
 
 
     public static void main(String[] args) {
+        //data type vehicle
         Vehicle v = new Vehicle();
-        Car c = new Car();
+        //data type vehicle creating a car instance labled c
+        Vehicle c = new Car();
+        //data type jet creating a jet instance labled j
         Jet j = new Jet();
 
         v.setIsOperable(true);
@@ -14,13 +17,12 @@ public class VehicleTest {
 
         c.setIsOperable(false);
         c.setPassengerCapacity(4);
-        c.setPowerSource("diesal");
+        c.setPowerSource("hybrid");
 
         j.setIsOperable(true);
         j.setPassengerCapacity(2);
         j.setPowerSource("magic");
 
-        System.out.println("=========");
         System.out.println(v.toString());
         System.out.println("=========");
         System.out.println(c.toString());

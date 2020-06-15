@@ -7,16 +7,17 @@ public class Vehicle {
     private String powerSource;
 
     //Constructor
-    public Vehicle(){
+    public Vehicle() {
 
     }
 
-    public Vehicle(boolean operable, int capacity, String power){
+    public Vehicle(boolean operable, int capacity, String power) {
         this.isOperable = operable;
         this.passengerCapacity = capacity;
         this.powerSource = power;
     }
 
+    //toString override
     @Override
     public String toString() {
         return "Vehicle{" +
@@ -27,22 +28,27 @@ public class Vehicle {
     }
 
     //Getters & Setters
-    public boolean getIsOperable(){
+    public boolean getIsOperable() {
         return this.isOperable;
     }
-    public void setIsOperable(boolean x){
+
+    public void setIsOperable(boolean x) {
         this.isOperable = x;
     }
-    public int getPassengerCapacity(){
+
+    public int getPassengerCapacity() {
         return this.passengerCapacity;
     }
-    public void setPassengerCapacity(int i){
+
+    public void setPassengerCapacity(int i) {
         this.passengerCapacity = i;
     }
-    public String getPowerSource(){
+
+    public String getPowerSource() {
         return this.powerSource;
     }
-    public void setPowerSource(String p){
+
+    public void setPowerSource(String p) {
         this.powerSource = p;
     }
 
