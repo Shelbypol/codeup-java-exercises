@@ -24,6 +24,7 @@ public class MusicTest {
 //        //SAX TYPE
         Sax s1 = new Sax("wind", "a small sax");
         System.out.println(s1.getSaxType());
+        System.out.println(s1.getSaxType());
 //
 //        //INTERFACE TYPE
 //        System.out.println("Piano 2");

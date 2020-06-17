@@ -1,6 +1,6 @@
 package MusicInstruments;
 
-public class MusicalInstrument implements Playable {
+public class MusicalInstrument{
 
     //PRIVATE STRING FIELD
     private String instrumentClassification;
@@ -12,17 +12,6 @@ public class MusicalInstrument implements Playable {
     public MusicalInstrument(String instrumentClassification) {
         this.instrumentClassification = instrumentClassification;
     }
-
-    //PLAYABLE INTERFACE
-    @Override
-    public void startMusic() {
-
-    }
-    @Override
-    public void stopMusic() {
-
-    }
-
 
     //GETTERS & SETTERS
     public String getInstrumentClassification() {
