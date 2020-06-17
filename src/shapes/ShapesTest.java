@@ -7,19 +7,9 @@ public class ShapesTest {
 
     public static void main(String[] args) {
 
-//        Measurable myShape = new Quadrilateral() {
-//            @Override
-//            public double getPerimeter() {
-//                return 0;
-//            }
-//
-//            @Override
-//            public double getArea() {
-//                return 0;
-//            }
-//        };
+        Measurable myShape;
 
-
+        myShape = new Square(3.0);
 
         Measurable square1 = new Square(3.0);
         Measurable rectangle1 = new Rectangle(3, 5);

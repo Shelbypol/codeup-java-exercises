@@ -6,8 +6,8 @@ public class Piano extends MusicalInstrument implements VolumeAdjustable, Tunabl
     private int numberOfKeys;
 
     //CONSTRUCTOR
-    public Piano(String e, int numberOfKeys){
-        super(e);
+    public Piano(String instrumentClassification, int numberOfKeys){
+        super(instrumentClassification);
         this.numberOfKeys = numberOfKeys;
     }
 

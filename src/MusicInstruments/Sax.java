@@ -6,8 +6,8 @@ public class Sax extends MusicalInstrument implements Tunable, VolumeAdjustable 
     private String saxType;
 
     //CONSTRUCTOR
-    public Sax(String saxType){
-        super();
+    public Sax(String instrumentClassification, String saxType){
+        super(instrumentClassification);
         this.saxType = saxType;
     }
 
