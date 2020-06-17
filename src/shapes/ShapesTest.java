@@ -1,26 +1,35 @@
 package shapes;
 
+
 public class ShapesTest {
+
+    Measurable myShape;
 
     public static void main(String[] args) {
 
-        Measurable myShape = new Measurable() {
-            @Override
-            public double getPerimeter() {
-                return 0;
-            }
+//        Measurable myShape = new Quadrilateral() {
+//            @Override
+//            public double getPerimeter() {
+//                return 0;
+//            }
+//
+//            @Override
+//            public double getArea() {
+//                return 0;
+//            }
+//        };
 
-            @Override
-            public double getArea() {
-                return 0;
-            }
-        };
+        Measurable square1 = new Square(3.0);
+        Measurable rectangle1 = new Rectangle(3, 5);
 
-            Measurable square1 = new Square(3.0);
-            Measurable rectangle1 = new Rectangle(3, 5);
+        System.out.println("Square");
+        System.out.println("Area: " + square1.getArea());
+        System.out.println("Perimeter: " + square1.getPerimeter());
+        System.out.println("===================");
 
-        System.out.println(myShape);
-        System.out.println(rectangle1);
+        System.out.println("Rectangle");
+        System.out.println("Area: " + rectangle1.getArea());
+        System.out.println("Perimeter: " + rectangle1.getPerimeter());
 
 //            @Override
 //            public double getPerimeter() {
@@ -31,8 +40,6 @@ public class ShapesTest {
 //            public double getArea() {
 //                return 0;
 //            }
-
-
 
 
 //        Rectangle box1 = new Rectangle(5, 4);
