@@ -5,12 +5,12 @@ public class Student {
 
     //PRIVATE PROPERTIES
     private String name;
-    private ArrayList<Integer> grades;
+    private ArrayList<Integer> grades = new ArrayList<>();
 
     //CONSTRUCTOR
-    public Student(String name, ArrayList<Integer> grades){
+    public Student(String name, int grade){
         this.name = name;
-        this.grades = grades;
+        this.grades.add(grade);
     }
 
     //METHODS
@@ -18,7 +18,7 @@ public class Student {
         grades.add(grade);
     }
 
-    public Integer getGradeAverage() {
+    public int getGradeAverage() {
         int sum = 0;
         for(int grade : grades){
             sum += grade;
@@ -29,10 +29,11 @@ public class Student {
     //MAIN METHOD
     public static void main(String[] args) {
 
-        Student s1 = new Student("Bob" , 1.2);
-
-
-
+        Student s1 = new Student("k", 34);
+        s1.addGrade(88);
+        System.out.println(s1.getGradeAverage());
+        s1.addGrade(92);
+        System.out.println(s1.getGradeAverage());
     }
 
     //GETTERS & SETTERS
