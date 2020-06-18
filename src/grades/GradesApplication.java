@@ -28,7 +28,7 @@ public class GradesApplication {
         s3.addGrade(74);
 
         //STUDENT 4
-        Student s4 = new Student("Laura");
+        Student s4 = new Student("You know who you are...");
         s4.addGrade(100);
         s4.addGrade(86);
         s4.addGrade(94);
@@ -50,12 +50,13 @@ public class GradesApplication {
         Input input = new Input();
         boolean confirmContinue;
         do {
-            System.out.println("Which student would you like to see more information about?");
+            System.out.println("\nWhich student would you like to see more information about?");
             String userInput = input.getString();
             if (students.containsKey(userInput)) {
-                System.out.println("Name: " + students.get(userInput).getName() +
-                        " - GitHub Username: " + userInput +
-                        "\nCurrent Average: " + students.get(userInput).getGradeAverage());
+                System.out.println("\nName: " + students.get(userInput).getName() +
+                        "\nGitHub Username: " + userInput +
+                        "\nCurrent Average: " + students.get(userInput).getGradeAverage() +
+                        "\nInd. grades: " + students.get(userInput).getGrades());
             } else {
                 System.out.printf("Sorry, no student found with the GitHub username of %s", userInput);
             }
