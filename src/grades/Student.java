@@ -5,12 +5,12 @@ public class Student {
 
     //PRIVATE PROPERTIES
     private String name;
-    private ArrayList<Integer> grades = new ArrayList<>();
+    private ArrayList<Integer> grades;
 
     //CONSTRUCTOR
-    public Student(String name, int grade){
+    public Student(String name){
         this.name = name;
-        this.grades.add(grade);
+        grades = new ArrayList<>();
     }
 
     //METHODS
@@ -29,7 +29,7 @@ public class Student {
     //MAIN METHOD
     public static void main(String[] args) {
 
-        Student s1 = new Student("k", 34);
+        Student s1 = new Student("k");
         s1.addGrade(88);
         System.out.println(s1.getGradeAverage());
         s1.addGrade(92);
@@ -37,7 +37,6 @@ public class Student {
     }
 
     //GETTERS & SETTERS
-
     //get/set name
     public String getName() {
         return name;
