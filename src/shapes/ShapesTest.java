@@ -3,25 +3,29 @@ package shapes;
 
 public class ShapesTest {
 
-    Measurable myShape;
-
     public static void main(String[] args) {
 
-        Measurable myShape;
 
-        myShape = new Square(3.0);
+        Measurable myShape1 = new Square(4.0);
+        Measurable myShape2  = new Rectangle(5, 10);
 
-        Measurable square1 = new Square(3.0);
-        Measurable rectangle1 = new Rectangle(3, 5);
+        Rectangle r1 = new Rectangle(3,10);
+        r1.setLength(8);
 
         System.out.println("Square");
-        System.out.println("Area: " + square1.getArea());
-        System.out.println("Perimeter: " + square1.getPerimeter());
+        System.out.println("Area: " + myShape1.getArea());
+        System.out.println("Perimeter: " + myShape1.getPerimeter());
         System.out.println("===================");
 
         System.out.println("Rectangle");
-        System.out.println("Area: " + rectangle1.getArea());
-        System.out.println("Perimeter: " + rectangle1.getPerimeter());
+
+        System.out.println("Area: " + myShape2.getArea());
+        System.out.println("Perimeter: " + myShape2.getPerimeter());
+        System.out.println("===================");
+
+        System.out.println("Rectangle");
+        System.out.println("Area: " + r1.getArea());
+        System.out.println("Perimeter: " + r1.getPerimeter());
 
 //            @Override
 //            public double getPerimeter() {

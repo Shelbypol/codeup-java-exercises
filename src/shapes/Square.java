@@ -14,4 +14,15 @@ public class Square extends Quadrilateral implements Measurable {
     public double getArea() {
         return Math.pow(width, 2);
     }
+
+//    //Measurable Implementation
+    @Override
+    public void setWidth(double s) {
+        this.width = s;
+    }
+    @Override
+    public void setLength(double s) {
+        this.length = s;
+    }
+
 }

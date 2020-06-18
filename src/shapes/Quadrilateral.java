@@ -1,6 +1,6 @@
 package shapes;
 
-public abstract class Quadrilateral extends Shape{
+public abstract class Quadrilateral extends Shape implements Measurable{
 
     double length;
     double width;
@@ -18,12 +18,11 @@ public abstract class Quadrilateral extends Shape{
     public double getWidth() {
         return width;
     }
-    public void setWidth(double width) {
-        this.width = width;
+
+    public void setWidth(double w) {
     }
 
-    public void setLength(double length){
-        this.length = length;
+    public void setLength(double l){
     }
 
 }
