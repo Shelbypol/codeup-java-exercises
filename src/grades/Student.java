@@ -8,22 +8,22 @@ public class Student {
     private ArrayList<Integer> grades;
 
     //CONSTRUCTOR
-    public Student(String name){
+    public Student(String name) {
         this.name = name;
         grades = new ArrayList<>();
     }
 
     //METHODS
-    public void addGrade(int grade){
+    public void addGrade(int grade) {
         grades.add(grade);
     }
 
     public int getGradeAverage() {
         int sum = 0;
-        for(int grade : grades){
+        for (int grade : grades) {
             sum += grade;
         }
-        return sum/grades.size();
+        return sum / grades.size();
     }
 
     //MAIN METHOD
@@ -37,17 +37,18 @@ public class Student {
     }
 
     //GETTERS & SETTERS
-    //get/set name
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
-    //get/set array
+
     public ArrayList<Integer> getGrades() {
         return grades;
     }
+
     public void setGrades(ArrayList<Integer> grades) {
         this.grades = grades;
     }

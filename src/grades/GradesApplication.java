@@ -1,13 +1,12 @@
 package grades;
-
 import util.Input;
-
 import java.util.HashMap;
 
 public class GradesApplication {
 
     //MAIN METHOD
     public static void main(String[] args) {
+
         HashMap<String, Student> students = new HashMap<>();
 
         //STUDENT 1
