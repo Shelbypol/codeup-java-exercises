@@ -1,5 +1,10 @@
 package grades;
+import javax.swing.plaf.PanelUI;
+import java.text.DateFormat;
+import java.text.FieldPosition;
+import java.text.ParsePosition;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 public class Student {
@@ -7,14 +12,16 @@ public class Student {
     //PRIVATE PROPERTIES
     private String name;
     private ArrayList<Integer> grades;
+    private HashMap<String, String> attendance;
 
     //CONSTRUCTOR
     public Student(String name) {
         this.name = name;
         grades = new ArrayList<>();
+        attendance = new HashMap<>();
     }
 
-    //METHODS
+    //GRADE METHODS
     public void addGrade(int grade) {
         grades.add(grade);
     }
@@ -27,9 +34,14 @@ public class Student {
         return sum / grades.size();
     }
 
-//    public int getClasssAverage(int x){
-//        retirm getGradeAverage()/x;
-//    }
+    //ATTENDANCE METHODS
+    public String addAttendance(String date, String attendance) {
+
+
+        return this.attendance.put(date, attendance);
+    }
+//    public
+
 
     //MAIN METHOD
     public static void main(String[] args) {
@@ -58,4 +70,10 @@ public class Student {
         this.grades = grades;
     }
 
+    public HashMap<String, String> getAttendance() {
+        return attendance;
+    }
+    public void setAttendance(HashMap<String, String> attendance) {
+        this.attendance = attendance;
+    }
 }

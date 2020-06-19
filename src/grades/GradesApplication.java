@@ -28,6 +28,7 @@ public class GradesApplication {
         s1.addGrade(92);
         s1.addGrade(76);
         s1.addGrade(80);
+//        s1.addAttendance("2020-10-2", "P");
 
         //STUDENT 2
         Student s2 = new Student("Elizabeth");
@@ -85,9 +86,8 @@ public class GradesApplication {
                 }
                 System.out.println("Class Avg: " + count / students.size());
 
-                //SEARCH CVS REPORT
+                //CVS REPORT
             } else if (userInput.equalsIgnoreCase("all")) {
-                //github username
                 System.out.println("------------------------------------");
                 System.out.println("| name | github_username | average |");
                 System.out.println("------------------------------------");
