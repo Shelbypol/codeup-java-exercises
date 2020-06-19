@@ -28,7 +28,7 @@ public class GradesApplication {
         s3.addGrade(74);
 
         //STUDENT 4
-        Student s4 = new Student("You know who you are...");
+        Student s4 = new Student("Grace");
         s4.addGrade(100);
         s4.addGrade(86);
         s4.addGrade(94);
@@ -50,14 +50,36 @@ public class GradesApplication {
         Input input = new Input();
         boolean confirmContinue;
         do {
-            System.out.println("\nWhich student would you like to see more information about?");
+            System.out.println("\n=  Which student would you like to see more information about?");
+            System.out.println("=  Type 'avg' to see the average of all students.");
+            System.out.println("= Type 'all' to see report of all students.");
             String userInput = input.getString();
+
+            //SEARCH FOR IND STUDENT
             if (students.containsKey(userInput)) {
                 System.out.println("\nName: " + students.get(userInput).getName() +
                         "\nGitHub Username: " + userInput +
                         "\nCurrent Average: " + students.get(userInput).getGradeAverage() +
                         "\nInd. grades: " + students.get(userInput).getGrades());
-            } else {
+
+            //SEARCH GRADE AVG
+            } else if(userInput.equalsIgnoreCase("avg")){
+                    int count = 0;
+                for (Student value : students.values()) {
+                    int grades = value.getGradeAverage();
+                    count +=grades;
+                }
+                System.out.println("Class Avg: " + count/students.size());
+
+            //SEARCH CVS REPORT
+            }else if(userInput.equalsIgnoreCase("all")){
+                System.out.println("| name | github_username | average |");
+                for (String key : students.keySet()) {
+                    System.out.print(" |" + key + "|\n");
+                }
+            }
+            //SAD PATH
+            else {
                 System.out.printf("Sorry, no student found with the GitHub username of %s", userInput);
             }
             System.out.println("\nWould you like to see another student? [y/N]");

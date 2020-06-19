@@ -1,5 +1,6 @@
 package grades;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Student {
 
@@ -25,6 +26,10 @@ public class Student {
         }
         return sum / grades.size();
     }
+
+//    public int getClasssAverage(int x){
+//        retirm getGradeAverage()/x;
+//    }
 
     //MAIN METHOD
     public static void main(String[] args) {
