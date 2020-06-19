@@ -1,8 +1,18 @@
 package grades;
+
 import util.Input;
+
 import java.util.HashMap;
 
 public class GradesApplication {
+
+    //grades
+//    public static int avgStudentGrade() {
+//        for (Student value : ) {
+//            int gradeAvg = value.getGradeAverage();
+//        }
+//        return gradeAvg;
+//    }
 
     //MAIN METHOD
     public static void main(String[] args) {
@@ -51,7 +61,7 @@ public class GradesApplication {
         boolean confirmContinue;
         do {
             System.out.println("\n=  Which student would you like to see more information about?");
-            System.out.println("=  Type 'avg' to see the average of all students.");
+            System.out.println("= Type 'avg' to see the average of all students.");
             System.out.println("= Type 'all' to see report of all students.");
             String userInput = input.getString();
 
@@ -62,26 +72,36 @@ public class GradesApplication {
                         "\nCurrent Average: " + students.get(userInput).getGradeAverage() +
                         "\nInd. grades: " + students.get(userInput).getGrades());
 
-            //SEARCH GRADE AVG
-            } else if(userInput.equalsIgnoreCase("avg")){
-                    int count = 0;
+                //SEARCH GRADE AVG
+            } else if (userInput.equalsIgnoreCase("avg")) {
+                int count = 0;
                 for (Student value : students.values()) {
                     int grades = value.getGradeAverage();
-                    count +=grades;
+                    count += grades;
                 }
-                System.out.println("Class Avg: " + count/students.size());
+                System.out.println("Class Avg: " + count / students.size());
 
-            //SEARCH CVS REPORT
-            }else if(userInput.equalsIgnoreCase("all")){
+                //SEARCH CVS REPORT
+            } else if (userInput.equalsIgnoreCase("all")) {
                 System.out.println("| name | github_username | average |");
+                //github username
                 for (String key : students.keySet()) {
-                    System.out.print(" |" + key + "|\n");
+                    System.out.print(" |" + key  + "|");
+                    //grades
+                    for(Student value : students.values()){
+                        System.out.print(" |" + value.getGradeAverage()  );
+                    }
                 }
-            }
-            //SAD PATH
-            else {
+                //grades
+//                for(Student value : students.values()){
+//                    System.out.println(" |" + value.getGradeAverage()  + "|\n");
+//                }
+
+                //SAD PATH
+            } else {
                 System.out.printf("Sorry, no student found with the GitHub username of %s", userInput);
             }
+            //DO-WHILE CONDITIONAL
             System.out.println("\nWould you like to see another student? [y/N]");
             confirmContinue = input.yesNo();
         } while (confirmContinue);
