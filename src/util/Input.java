@@ -19,56 +19,60 @@ public class Input {
         return getString().startsWith("y");
     }
 
-    //recursion
+    //METHODS
     public int getInt() {
-        if (sc.hasNextInt()) {
-            return sc.nextInt();
-        } else {
-            System.out.println("Invalid input. Need an number");
-            sc.next();
+        try {
+            return Integer.valueOf(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("not a num");
+            System.out.println(e.getMessage());
             return getInt();
         }
     }
 
-
     public int getInt(int min, int max) {
-        int userInput = getInt();
-        if (userInput < max || userInput > min) {
-            System.out.println("Try Again:");
+        int userInt = getInt();
+        if (userInt >= min && userInt <= max) {
+            return userInt;
+        } else {
+            System.out.println("Please enter an integer in the correct range between " + min + " " + "and " + max);
             return getInt(min, max);
         }
-        return userInput;
     }
 
-    public double getDouble() {
-        if (sc.hasNextDouble()) {
-            return sc.nextInt();
-        } else {
-            System.out.println("Invalid input need a decimal num");
-            sc.next();
-            return getDouble();
+        public double getDouble () {
+            try{
+                return Double.valueOf(getString());
+            } catch(NumberFormatException e) {
+                System.out.println("Invalid input need a decimal num");
+                System.out.println(e.getMessage());
+                return getDouble();
+            }
         }
-    }
 
-//    public double getDouble(double min, double max) {
-//        double userInput = getDouble();
-//        if((userInput > max || userInput < min)){
-//            return userInput;
-//        } else  {
-//            System.out.println("Try Again:");
-//            return getDouble(min, max);
+        public double getDouble ( double min, double max){
+            double userInput = getDouble();
+            if (userInput > max || userInput < min) {
+                System.out.println("Try Again:");
+                return getDouble(min, max);
+            }
+            return userInput;
+        }
+}
+
+
+
+
+
+
+
+
+//    public double getDouble () {
+//        if (sc.hasNextDouble()) {
+//            return sc.nextInt();
+//        } else {
+//            System.out.println("Invalid input need a decimal num");
+//            sc.next();
+//            return getDouble();
 //        }
 //    }
-
-
-    public double getDouble(double min, double max) {
-//        double userInput = getDouble();
-        double userInput = sc.nextDouble();
-        if (userInput > max || userInput < min) {
-            System.out.println("Try Again:");
-            return getDouble(min, max);
-        }
-        return userInput;
-    }
-
-}
