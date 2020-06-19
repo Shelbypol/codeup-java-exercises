@@ -1,14 +1,17 @@
 package grades;
 
 import util.Input;
-
+import java.util.Map;
 import java.util.HashMap;
 
 public class GradesApplication {
 
     //grades
-//    public static int avgStudentGrade() {
-//        for (Student value : ) {
+//    HashMap<String, Integer> map
+//            = new HashMap<>();
+
+//    public static int avgStudentGrade(HashMap map) {
+//        for (Student value :  ) {
 //            int gradeAvg = value.getGradeAverage();
 //        }
 //        return gradeAvg;
@@ -60,7 +63,7 @@ public class GradesApplication {
         Input input = new Input();
         boolean confirmContinue;
         do {
-            System.out.println("\n=  Which student would you like to see more information about?");
+            System.out.println("\n= Type which student would you like to see more information about?");
             System.out.println("= Type 'avg' to see the average of all students.");
             System.out.println("= Type 'all' to see report of all students.");
             String userInput = input.getString();
@@ -83,19 +86,12 @@ public class GradesApplication {
 
                 //SEARCH CVS REPORT
             } else if (userInput.equalsIgnoreCase("all")) {
-                System.out.println("| name | github_username | average |");
                 //github username
-                for (String key : students.keySet()) {
-                    System.out.print(" |" + key  + "|");
-                    //grades
-                    for(Student value : students.values()){
-                        System.out.print(" |" + value.getGradeAverage()  );
-                    }
-                }
-                //grades
-//                for(Student value : students.values()){
-//                    System.out.println(" |" + value.getGradeAverage()  + "|\n");
-//                }
+                    System.out.println("| name | github_username | average |");
+                    for (Map.Entry<String, Student> e : students.entrySet())
+                        System.out.printf("|%s%4d|%f%4d|%f%4d" , students.get(e.getKey()).getName(),e.getKey(),e.getValue().getGradeAverage());
+//                for (Map.Entry<String, Student> e : students.entrySet())
+//                    System.out.println("| " + students.get(e.getKey()).getName() + "%4d| " + e.getKey() + " | " + e.getValue().getGradeAverage());
 
                 //SAD PATH
             } else {
