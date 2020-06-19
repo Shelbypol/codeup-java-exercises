@@ -25,7 +25,7 @@ public class InputTest {
         double getDouble = input1.getDouble();
         System.out.printf("You entered: %.2f\n", getDouble);
 
-        System.out.println("Please enter a number between 0 and 1.");
+        System.out.println("Please enter a number between 0 and 100.");
         double getDoubleRange = input1.getDouble(0, 100);
         System.out.printf("You entered: %.2f\n", getDoubleRange);
 //
