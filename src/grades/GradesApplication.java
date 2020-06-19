@@ -1,6 +1,7 @@
 package grades;
 
 import util.Input;
+
 import java.util.Map;
 import java.util.HashMap;
 
@@ -87,15 +88,15 @@ public class GradesApplication {
                 //SEARCH CVS REPORT
             } else if (userInput.equalsIgnoreCase("all")) {
                 //github username
-                    System.out.println("| name | github_username | average |");
-                    for (Map.Entry<String, Student> e : students.entrySet())
-                        System.out.printf("|%s%4d|%f%4d|%f%4d" , students.get(e.getKey()).getName(),e.getKey(),e.getValue().getGradeAverage());
-//                for (Map.Entry<String, Student> e : students.entrySet())
-//                    System.out.println("| " + students.get(e.getKey()).getName() + "%4d| " + e.getKey() + " | " + e.getValue().getGradeAverage());
-
+                System.out.println("------------------------------------");
+                System.out.println("| name | github_username | average |");
+                System.out.println("------------------------------------");
+                for (Map.Entry<String, Student> e : students.entrySet()) {
+                    System.out.printf("|%s%-2s|%-2s%s%-2s|%-2s%d\n", students.get(e.getKey()).getName(), "", "", e.getKey(), "", "", e.getValue().getGradeAverage());
+                }
                 //SAD PATH
             } else {
-                System.out.printf("Sorry, no student found with the GitHub username of %s", userInput);
+                System.out.printf("Sorry, no student found with thalle GitHub username of %s", userInput);
             }
             //DO-WHILE CONDITIONAL
             System.out.println("\nWould you like to see another student? [y/N]");
