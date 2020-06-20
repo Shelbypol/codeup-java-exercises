@@ -50,7 +50,7 @@ public class Input {
             }
         }
 
-        public double getDouble ( double min, double max){
+        public double getDouble(double min, double max){
             double userInput = getDouble();
             if (userInput > max || userInput < min) {
                 System.out.println("Try Again:");

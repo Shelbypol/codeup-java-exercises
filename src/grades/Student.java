@@ -7,18 +7,20 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
+import util.Input;
+
 public class Student {
 
     //PRIVATE PROPERTIES
     private String name;
     private ArrayList<Integer> grades;
-    private HashMap<String, String> attendance;
+    private HashMap<String, String> attendance = new HashMap<>();
 
     //CONSTRUCTOR
     public Student(String name) {
         this.name = name;
         grades = new ArrayList<>();
-        attendance = new HashMap<>();
+//        attendance = new HashMap<>();
     }
 
     //GRADE METHODS
@@ -35,13 +37,27 @@ public class Student {
     }
 
     //ATTENDANCE METHODS
-    public String addAttendance(String date, String attendance) {
-
-
-        return this.attendance.put(date, attendance);
+    public void recordAttendance(String date, String value) {
+        if(value.equalsIgnoreCase("A") || value.equalsIgnoreCase("P")){
+            attendance.put(date, value);
+        }else{
+            System.out.println("Please enter 'P' or 'A'");
+        }
     }
-//    public
 
+    //ATTENDANCE AVERAGE
+    public double avgAttendance(){
+        int countP = 0;
+        int countA = 0;
+        for(String date : attendance.keySet()){
+            if(attendance.get(date).equals("P")){
+                countP += 1;
+            }else{
+                countA += 1;
+            }
+        }
+        return (double)(attendance.size() - countA) / attendance.size() * 100;
+    }
 
     //MAIN METHOD
     public static void main(String[] args) {

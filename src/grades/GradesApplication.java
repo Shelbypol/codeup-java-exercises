@@ -96,7 +96,7 @@ public class GradesApplication {
                 }
                 //SAD PATH
             } else {
-                System.out.printf("Sorry, no student found with thalle GitHub username of %s", userInput);
+                System.out.printf("Sorry, no student found with the GitHub username of %s", userInput);
             }
             //DO-WHILE CONDITIONAL
             System.out.println("\nWould you like to see another student? [y/N]");
