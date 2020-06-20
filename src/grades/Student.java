@@ -45,18 +45,23 @@ public class Student {
         }
     }
 
+    public void getAttnedance(){
+        System.out.println(attendance);
+    }
+
     //ATTENDANCE AVERAGE
     public double avgAttendance(){
         int countP = 0;
         int countA = 0;
         for(String date : attendance.keySet()){
-            if(attendance.get(date).equals("P")){
-                countP += 1;
+            if(attendance.get(date).equalsIgnoreCase("P")){
+                countP++ ;
             }else{
-                countA += 1;
+                countA++ ;
             }
         }
-        return (double)(attendance.size() - countA) / attendance.size() * 100;
+        double presentAvg =((double)(attendance.size() - countA) / attendance.size() * 100);
+        return presentAvg;
     }
 
     //MAIN METHOD

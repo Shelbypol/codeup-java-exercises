@@ -28,25 +28,65 @@ public class GradesApplication {
         s1.addGrade(92);
         s1.addGrade(76);
         s1.addGrade(80);
-//        s1.addAttendance("2020-10-2", "P");
+        s1.recordAttendance("2020-10-02", "P");
+        s1.recordAttendance("2020-10-03", "A");
+        s1.recordAttendance("2020-10-04", "P");
+        s1.recordAttendance("2020-10-05", "P");
+        s1.recordAttendance("2020-10-06", "A");
+        s1.recordAttendance("2020-10-07", "A");
+        s1.recordAttendance("2020-10-08", "P");
+        s1.recordAttendance("2020-10-09", "P");
+        s1.recordAttendance("2020-10-10", "P");
+        s1.recordAttendance("2020-10-11", "P");
+
 
         //STUDENT 2
         Student s2 = new Student("Elizabeth");
         s2.addGrade(86);
         s2.addGrade(96);
         s2.addGrade(70);
+        s2.recordAttendance("2020-10-02", "A");
+        s2.recordAttendance("2020-10-03", "P");
+        s2.recordAttendance("2020-10-04", "P");
+        s2.recordAttendance("2020-10-05", "P");
+        s2.recordAttendance("2020-10-06", "P");
+        s2.recordAttendance("2020-10-07", "P");
+        s2.recordAttendance("2020-10-08", "P");
+        s2.recordAttendance("2020-10-09", "A");
+        s2.recordAttendance("2020-10-10", "P");
+        s2.recordAttendance("2020-10-11", "P");
 
         //STUDENT 3
         Student s3 = new Student("Summer");
         s3.addGrade(87);
         s3.addGrade(76);
         s3.addGrade(74);
+        s3.recordAttendance("2020-10-02", "A");
+        s3.recordAttendance("2020-10-03", "P");
+        s3.recordAttendance("2020-10-04", "A");
+        s3.recordAttendance("2020-10-05", "P");
+        s3.recordAttendance("2020-10-06", "P");
+        s3.recordAttendance("2020-10-07", "P");
+        s3.recordAttendance("2020-10-08", "P");
+        s3.recordAttendance("2020-10-09", "P");
+        s3.recordAttendance("2020-10-10", "A");
+        s3.recordAttendance("2020-10-11", "P");
 
         //STUDENT 4
         Student s4 = new Student("Grace");
         s4.addGrade(100);
         s4.addGrade(86);
         s4.addGrade(94);
+        s4.recordAttendance("2020-10-02", "P");
+        s4.recordAttendance("2020-10-03", "P");
+        s4.recordAttendance("2020-10-04", "P");
+        s4.recordAttendance("2020-10-05", "P");
+        s4.recordAttendance("2020-10-06", "P");
+        s4.recordAttendance("2020-10-07", "P");
+        s4.recordAttendance("2020-10-08", "P");
+        s4.recordAttendance("2020-10-09", "A");
+        s4.recordAttendance("2020-10-10", "P");
+        s4.recordAttendance("2020-10-11", "P");
 
         students.put("watermelondrea", s1);
         students.put("lizzyMc", s2);
@@ -75,7 +115,8 @@ public class GradesApplication {
                 System.out.println("\nName: " + students.get(userInput).getName() +
                         "\nGitHub Username: " + userInput +
                         "\nCurrent Average: " + students.get(userInput).getGradeAverage() +
-                        "\nInd. grades: " + students.get(userInput).getGrades());
+                        "\nInd. grades: " + students.get(userInput).getGrades() +
+                        "\nAvg. Attendance: " + students.get(userInput).avgAttendance() );
 
                 //SEARCH GRADE AVG
             } else if (userInput.equalsIgnoreCase("avg")) {
