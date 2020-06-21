@@ -67,11 +67,15 @@ public class Student {
 
     //DAY ABSENT
 
+        String hey;
     public String daysAbsent() {
         for (String key : attendance.keySet()) {
-            attendance.get(key).equalsIgnoreCase("A"); ? return attendance.get(key) : System.out.println("No days absent");
-            return attendance.get(key);
+           if(attendance.get(key).equalsIgnoreCase("A")) {
+                hey = attendance.get(key);
+            }
+           System.out.println("No days absent");
         }
+        return hey;
     }
 
     //MAIN METHOD
