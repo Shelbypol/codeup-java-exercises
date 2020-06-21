@@ -1,4 +1,5 @@
 package grades;
+
 import javax.swing.plaf.PanelUI;
 import java.text.DateFormat;
 import java.text.FieldPosition;
@@ -38,30 +39,39 @@ public class Student {
 
     //ATTENDANCE METHODS
     public void recordAttendance(String date, String value) {
-        if(value.equalsIgnoreCase("A") || value.equalsIgnoreCase("P")){
+        if (value.equalsIgnoreCase("A") || value.equalsIgnoreCase("P")) {
             attendance.put(date, value);
-        }else{
+        } else {
             System.out.println("Please enter 'P' or 'A'");
         }
     }
 
-    public void getAttnedance(){
-        System.out.println(attendance);
-    }
+//    public void getAttnedance(){
+//        System.out.println(attendance);
+//    }
 
     //ATTENDANCE AVERAGE
-    public double avgAttendance(){
+    public double avgAttendance() {
         int countP = 0;
         int countA = 0;
-        for(String date : attendance.keySet()){
-            if(attendance.get(date).equalsIgnoreCase("P")){
-                countP++ ;
-            }else{
-                countA++ ;
+        for (String date : attendance.keySet()) {
+            if (attendance.get(date).equalsIgnoreCase("P")) {
+                countP++;
+            } else {
+                countA++;
             }
         }
-        double presentAvg =((double)(attendance.size() - countA) / attendance.size() * 100);
+        double presentAvg = ((double) (attendance.size() - countA) / attendance.size() * 100);
         return presentAvg;
+    }
+
+    //DAY ABSENT
+
+    public String daysAbsent() {
+        for (String key : attendance.keySet()) {
+            attendance.get(key).equalsIgnoreCase("A"); ? return attendance.get(key) : System.out.println("No days absent");
+            return attendance.get(key);
+        }
     }
 
     //MAIN METHOD
@@ -94,6 +104,7 @@ public class Student {
     public HashMap<String, String> getAttendance() {
         return attendance;
     }
+
     public void setAttendance(HashMap<String, String> attendance) {
         this.attendance = attendance;
     }

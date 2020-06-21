@@ -116,7 +116,8 @@ public class GradesApplication {
                         "\nGitHub Username: " + userInput +
                         "\nCurrent Average: " + students.get(userInput).getGradeAverage() +
                         "\nInd. grades: " + students.get(userInput).getGrades() +
-                        "\nAvg. Attendance: " + students.get(userInput).avgAttendance() );
+                        "\nAvg. Attendance: " + students.get(userInput).avgAttendance() +
+                        "\nDays Absent: " + students.get(userInput).daysAbsent());
 
                 //SEARCH GRADE AVG
             } else if (userInput.equalsIgnoreCase("avg")) {
