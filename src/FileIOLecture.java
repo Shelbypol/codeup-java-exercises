@@ -41,8 +41,9 @@ public class FileIOLecture {
 //            }
 //        }
 
-        //w
-        // riting to new hello.txt file
+
+        // writing to new hello.txt file
+
 //        String[] name = {"justin", "sophie", "vivian"};
 //        List<String> instructors = Arrays.asList(name);
 //        List<String> students = new ArrayList<>();
