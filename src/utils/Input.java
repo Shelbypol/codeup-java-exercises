@@ -7,7 +7,7 @@ public class Input {
     private Scanner sc;
 
     public Input() {
-        this.sc = new Scanner(System.in).useDelimiter("\n");
+        this.sc = new Scanner(System.in);
     }
 
     public String getString() {

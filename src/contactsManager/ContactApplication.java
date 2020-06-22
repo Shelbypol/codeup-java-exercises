@@ -1,5 +1,9 @@
 package contactsManager;
+
 import utils.Input;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,15 +18,15 @@ public class ContactApplication {
 
     public static void main(String[] args) throws IOException {
 
-        //PATCH TO CONTACTS
-        Path contacts = Paths.get("src/contactsManager", "contacts.txt");
-        //READ CONTACTS
-        List<String> contactList = Files.readAllLines(contacts);
-
         //DO-WHILE CONDITION
         boolean keepLooking = true;
 
         do {
+            //PATCH TO CONTACTS
+            Path contacts = Paths.get("src/contactsManager", "contacts.txt");
+            //READ CONTACTS
+            List<String> contactList = Files.readAllLines(contacts);
+
             System.out.println("\n------------------ MENU -----------------------");
             System.out.println("1. View contacts." +
                     "\n2. Add a new contact." +
@@ -45,12 +49,40 @@ public class ContactApplication {
                     break;
                 case 2:
                     //ADD NEW CONTACT
-                    System.out.println("Please enter contact name below.");
-                    String userInput = input.getString();
-                    Files.write(contactList , userInput , StandardOpenOption.APPEND);
+                    System.out.println("Please enter contacts first name below.");
+                    String userInputFirstName = input.getString();
+                    System.out.println("Please enter contacts last name below.");
+                    String userInputLastName = input.getString();
+                    System.out.println("Please enter contacts number below.");
+                    String userInputNumber = input.getString();
+                    Files.write(
+                            contacts,
+                            Arrays.asList(userInputFirstName + " " + userInputLastName + " " + userInputNumber),
+                            StandardOpenOption.APPEND
+                    );
                     keepLooking = true;
                     break;
                 case 3:
+                    //SEARCH BY NAMe
+
+                    System.out.println("Enter contact name");
+                    String userSearchContactName = input.getString();
+                    List<String> searchList = Files.readAllLines(contacts);
+
+                    for (String contact : searchList) {
+                        String[] testArray = contact.split(",");
+//                        System.out.println(testArray);
+//                        System.out.println("============");
+                        for(int i = 0; i < testArray.length; i++) {
+                            if (userSearchContactName.contains(testArray[i])) {
+//                            System.out.println(i);
+
+                                System.out.println(testArray[0] + testArray[1] + testArray[2]);
+                            }
+                        }
+                    }
+
+//                    String[] tokens = employee.split(delims);
 
                     keepLooking = true;
                     break;
@@ -65,7 +97,6 @@ public class ContactApplication {
             }
 
         } while (keepLooking);
-
 
 
     }
