@@ -13,13 +13,13 @@ public class InputTest {
 //        boolean yesNo = input1.yesNo();
 //        System.out.printf("You choose: %b\n", yesNo);
 
-        System.out.println("Please enter a whole number.");
-        int getInt = input1.getInt();
-        System.out.printf("You entered: %d\n", getInt);
-
-        System.out.println("Please enter a number between 20 and 35.");
-        int getIntRange = input1.getInt(20, 35);
-        System.out.printf("You entered: %d\n", getIntRange);
+//        System.out.println("Please enter a whole number.");
+//        int getInt = input1.getInt();
+//        System.out.printf("You entered: %d\n", getInt);
+//
+//        System.out.println("Please enter a number between 20 and 35.");
+//        int getIntRange = input1.getInt(20, 35);
+//        System.out.printf("You entered: %d\n", getIntRange);
 //
         System.out.println("Please enter decimal number.");
         double getDouble = input1.getDouble();

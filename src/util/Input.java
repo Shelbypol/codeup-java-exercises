@@ -23,9 +23,9 @@ public class Input {
     public int getInt() {
         try {
             return Integer.valueOf(getString());
+            //Integer.parseInt(getString)
         } catch (NumberFormatException e) {
             System.out.println("not a num");
-            System.out.println(e.getMessage());
             return getInt();
         }
     }
@@ -44,7 +44,7 @@ public class Input {
             try{
                 return Double.valueOf(getString());
             } catch(NumberFormatException e) {
-                System.out.println("Invalid input need a decimal num");
+                System.out.println("Invalid input need a num");
                 System.out.println(e.getMessage());
                 return getDouble();
             }
