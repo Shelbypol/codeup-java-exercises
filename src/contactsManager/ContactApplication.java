@@ -1,8 +1,9 @@
 package contactsManager;
 
 import utils.Input;
+
+import java.io.*;
 import java.util.Arrays;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,12 +13,6 @@ import java.util.List;
 public class ContactApplication {
 
     static Input input = new Input();
-
-//    public void caseOne(List<String> allContacts){
-//        for (String contact :  allContacts) {
-//            System.out.println(contact);
-//        }
-//    }
 
     public static void main(String[] args) throws IOException {
 
@@ -45,10 +40,9 @@ public class ContactApplication {
                 case 1:
                     //VIEW CONTACTS
                     System.out.println("=============== ALL CONTACTS ==================");
-//                    for (String contact : contactList) {
-//                    System.out.println(contact);
-//                }
-                    caseOne(contactList);
+                    for (String contact : contactList) {
+                    System.out.println(contact);
+                }
                     keepLooking = true;
                     break;
 
@@ -89,9 +83,29 @@ public class ContactApplication {
                     break;
 
                 case 4:
-//                    System.out.println("Type in name or number of contact you wish to delete.");
-//                    String userDeleteContactName = input.getString();
-//
+                    //OUTPUT = INPUT - DELETE
+                    System.out.println("Type in name or number of contact you wish to delete.");
+                    String userDeleteContactName = input.getString();
+
+                    File inputFile = new File("myFile.txt");
+                    File tempFile = new File("myTempFile.txt");
+
+                    BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+                    BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+                    String lineToRemove = userDeleteContactName;
+                    String currentLine;
+
+                    while((currentLine = reader.readLine()) != null) {
+                        // trim newline when comparing with lineToRemove
+                        String trimmedLine = currentLine.trim();
+                        if(trimmedLine.equals(lineToRemove)) continue;
+                        writer.write(currentLine + System.getProperty("line.separator"));
+                    }
+                    writer.close();
+                    reader.close();
+                    boolean successful = tempFile.renameTo(inputFile);
+
 //                    String[] deleteArray;
 //                    for (String contact : contactList) {
 //                        deleteArray = contact.split(",");
