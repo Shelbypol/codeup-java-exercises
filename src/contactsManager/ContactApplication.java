@@ -41,8 +41,8 @@ public class ContactApplication {
                     //VIEW CONTACTS
                     System.out.println("=============== ALL CONTACTS ==================");
                     for (String contact : contactList) {
-                    System.out.println(contact);
-                }
+                        System.out.println(contact);
+                    }
                     keepLooking = true;
                     break;
 
@@ -87,33 +87,21 @@ public class ContactApplication {
                     System.out.println("Type in name or number of contact you wish to delete.");
                     String userDeleteContactName = input.getString();
 
-                    File inputFile = new File("myFile.txt");
-                    File tempFile = new File("myTempFile.txt");
+                    String[] deleteArray;
+                    for (String contact : contactList) {
+                        deleteArray = contact.split(",");
 
-                    BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-                    BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
-
-                    String lineToRemove = userDeleteContactName;
-                    String currentLine;
-
-                    while((currentLine = reader.readLine()) != null) {
-                        // trim newline when comparing with lineToRemove
-                        String trimmedLine = currentLine.trim();
-                        if(trimmedLine.equals(lineToRemove)) continue;
-                        writer.write(currentLine + System.getProperty("line.separator"));
+                    List<String> deleteContact = Arrays.asList(deleteArray);
+                        for (int i = 0; i < deleteContact.size(); i++) {
+                            // if it is List<String>
+                            if (deleteContact[i].contains(i)) {
+                                deleteContact.remove(i);
+                            }
+                        }
                     }
-                    writer.close();
-                    reader.close();
-                    boolean successful = tempFile.renameTo(inputFile);
 
-//                    String[] deleteArray;
-//                    for (String contact : contactList) {
-//                        deleteArray = contact.split(",");
-//
 //                        for (int i = 0; i < deleteArray.length - 1; i++) {
 //                            if (deleteArray[i].contains(userDeleteContactName)) {
-//                                deleteArray = ArrayUtils.removeElement(deleteArray, i);
-//
 //                                System.out.println("-------");
 //
 ////                                System.out.println(deleteArray[0] + deleteArray[1] + " :" + deleteArray[2]);
@@ -122,16 +110,18 @@ public class ContactApplication {
 //                        }
 //                    }
 
+
                     keepLooking = true;
                     break;
                 case 5:
                     System.out.println("While contacts may be great glasses are better! Bye!");
                     keepLooking = false;
                     break;
-            }
 
+            }
         } while (keepLooking);
 
 
     }
 }
+
