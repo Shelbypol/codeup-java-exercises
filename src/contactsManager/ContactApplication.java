@@ -9,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -67,22 +68,20 @@ public class ContactApplication {
 
                     System.out.println("Enter contact name");
                     String userSearchContactName = input.getString();
-                    List<String> searchList = Files.readAllLines(contacts);
+//                    List<String> searchList = Files.readAllLines(contacts);
 
-                    for (String contact : searchList) {
-                        String[] testArray = contact.split(",");
-//                        System.out.println(testArray);
-//                        System.out.println("============");
-                        for(int i = 0; i < testArray.length; i++) {
-                            if (userSearchContactName.contains(testArray[i])) {
-//                            System.out.println(i);
 
+                    String[] testArray;
+                    for (String contact : contactList) {
+                        testArray = contact.split(",");
+
+                        for (int i = 0; i < testArray.length - 1; i++) {
+                            if (testArray[i].contains(userSearchContactName)) {
                                 System.out.println(testArray[0] + testArray[1] + testArray[2]);
                             }
                         }
                     }
 
-//                    String[] tokens = employee.split(delims);
 
                     keepLooking = true;
                     break;
