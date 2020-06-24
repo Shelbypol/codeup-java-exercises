@@ -45,6 +45,24 @@ public class MethodsExercises {
 //    }
 
     //(2) Validate user input;
+
+//     public static void getInteger() {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter a number between 1 and 10: ");
+//         int min =  Integer.parseInt(sc.nextLine());
+//         int max =  Integer.parseInt(sc.nextLine());
+
+//         if (( ((min > 0) && (min < 10)) && ((max > 0) && (max <= 10))  )){
+//         System.out.println("Congrats, your input is within range!");
+
+//         }else {
+//             System.out.println("Try Again:");
+//             getInteger();
+
+//         }
+
+//     }
+=======
 //    public static int getInteger(int min, int max) {
 //        Scanner sc = new Scanner(System.in);
 //        System.out.println("Enter a number between 1 and 50: ");
