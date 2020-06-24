@@ -14,16 +14,16 @@ public class Contacts extends Input {
 
     public static Input input = new Input();
 
-    //FILE PATH
+    //======================== FILE PATH
     public Path path() {
         return Paths.get("src/contactsManager", "contacts.txt");
     }
-    //READ FILE
+    //========================= READ FILE
     public List<String> readFile() throws IOException {
         return Files.readAllLines(path());
     }
 
-    //MENU SOUT
+    //========================= MENU SOUT
     public void menu(){
         System.out.println("\n------------------ MENU ---------------------");
         System.out.println("1. View contacts." +
@@ -35,8 +35,7 @@ public class Contacts extends Input {
         System.out.println("-----------------------------------------------");
     }
 
-
-    //CASE 1
+    //========================== CASE 1
     //VIEW CONTACTS
     public void caseOne(List<String> allContacts) {
         System.out.println("============ ALL CONTACTS ===============|");
@@ -50,7 +49,7 @@ public class Contacts extends Input {
         }
     }
 
-    //CASE 2
+    //========================== CASE 2
     //ADD CONTACT
     public void caseTwo(Path contacts) throws IOException {
         System.out.println("Who would you like to add?");
@@ -66,7 +65,7 @@ public class Contacts extends Input {
         System.out.println("You have successfully added: " + userInputFirstName + " " + userInputLastName);
     }
 
-    //CASE 3
+    //========================== CASE 3
     //SEARCH BY NAME
     public void caseThree(List<String> allContacts) {
         System.out.println("Enter contact's name: ");
@@ -171,7 +170,7 @@ public class Contacts extends Input {
         }
     }
 
-    //CASE 4
+    //========================== CASE 4
     //DELETE CONTACT
     public void caseFour(Path contacts, List<String> allContacts) throws IOException {
         System.out.println("Enter contact's first name: ");

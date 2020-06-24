@@ -10,7 +10,6 @@ public class ContactApplication {
         Contacts contactsApp = new Contacts();
 
         boolean keepLooking = true;
-
         do {
             contactsApp.path();
             contactsApp.readFile();
