@@ -62,7 +62,7 @@ public class MethodsExercises {
 //         }
 
 //     }
-=======
+
 //    public static int getInteger(int min, int max) {
 //        Scanner sc = new Scanner(System.in);
 //        System.out.println("Enter a number between 1 and 50: ");
